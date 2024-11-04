@@ -1,0 +1,284 @@
+.mr-dafoe-regular {
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.tomorrow-regular {
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'MrDafoe-Regular';
+    src: url('https://raw.githubusercontent.com/CyberWave-0k/cyberwave/refs/heads/master/Fonts/MR-Dafoe/MrDafoe-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url('https://raw.githubusercontent.com/CyberWave-0k/cyberwave/refs/heads/master/Fonts/Anton%2CTomorrow/Tomorrow/Tomorrow-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nexa-ExtraLight';
+    src: url('https://raw.githubusercontent.com/CyberWave-0k/cyberwave/refs/heads/master/Fonts/nexa/Nexa-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(/Fonts/Montserrat/static/Montserrat-Medium.ttf)
+}
+html {
+    scroll-behavior: smooth; /* Estilo CSS para scroll suave */
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 0px;
+    z-index:10;
+}
+.abajo {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 20px;
+    border-radius: 30px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+  }
+.abajo .logo{
+    margin-left: 0;
+}
+.abajo nav{
+    margin-right:0;
+}
+header .logo{
+    position:relative;
+    color:#ffff;
+    font-weight: bold;
+    font-size: 60px;
+    text-decoration:none;
+    font-family: 'MrDafoe-Regular';
+    src: url('/Fonts/MR-Dafoe/MrDafoe-Regular.ttf') format('truetype');
+    transition: 1.5s;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+header ul{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style:none;
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color:#ffff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+    font-family: 'Nexa-Heavy';
+}
+
+.zona1{
+    position:relative;
+    width: 100%;
+    height:100vh;
+    background: url(img/Fondo.bmp);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-section {
+    position: absolute;
+    top: 50%; /* Cambia esto de 50% a 40% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1.5s;
+    z-index: 10;
+}
+
+.welcome-section h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.welcome-section h1 {
+    font-family: 'Nexa-Heavy', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.scroll-abajo {
+    position: absolute;
+    bottom: 40px; /* Espacio desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #fff;
+    animation: fadeInUp 2s;
+    z-index: 10;
+    font-family: 'Nexa ExtraLight', 'Open Sans', sans-serif;
+}
+.indicate{
+    margin-top: 5px;
+}
+.indicate img{
+    width: 70px;
+    height:70px;
+    animation:moverFlecha 2s infinite;
+}
+@keyframes moverFlecha {
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.zona2{
+    position:relative;
+    width: 100%;
+    height:100vh;
+    color: #fff;
+    background: url(img/Fondo.bmp);
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+}
+.sobre-nos h2{
+    position:absolute;
+    margin: 90px 53px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    z-index:10;
+}
+.sobre-nos p{
+    position:absolute;
+    margin: 202px 402px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: bold;
+    z-index:10;
+}
+.polaroid{
+    position:absolute;
+    margin: 175px 23px;
+}
+.polaroid img{
+    width:318 px;
+    height: 337px;
+    
+}
+.vinilo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* Ajusta la posición vertical si es necesario */
+}
+
+.vinilo img {
+    max-width: 100%;
+    height: auto;
+}
+.foo{
+    text-align:center;
+    justify-content:center;
+    margin: auto;
+    font-family: 'Montserrat-Light', sans-serif;
+}
+.contactenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    z-index:0;
+}
+.contactenos h1 {
+    position:absolute;
+    margin: 120px 53px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+}
+.contactenos p {
+    position:absolute;
+    margin: 180px 402px;
+    font-family: 'Montserrat-Light', sans-serif;
+}
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* Detrás del contenido principal */
+    filter: blur(8px); /* Desenfoque aplicado al fondo de burbujas */
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #ff007f; /* Rosa neón */
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f, 0 0 60px #ff007f;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+/* Alternar colores neón más vivos */
+.bubbles span:nth-child(2n) {
+    background: #ff6f00; /* Naranja neón */
+    box-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00, 0 0 40px #ff6f00, 0 0 50px #ff6f00, 0 0 60px #ff6f00;
+}
+
+.bubbles span:nth-child(3n) {
+    background: #1a00ff; /* Azul eléctrico */
+    box-shadow: 0 0 10px #1a00ff, 0 0 20px #1a00ff, 0 0 30px #1a00ff, 0 0 40px #1a00ff, 0 0 50px #1a00ff, 0 0 60px #1a00ff;
+}
+
+.bubbles span:nth-child(4n) {
+    background: #ff00ff; /* Púrpura neón */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}

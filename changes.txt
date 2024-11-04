@@ -1,0 +1,44 @@
+�Claro! Analic� tu c�digo HTML, CSS y JavaScript. Parece que est�s intentando agregar una clase "abajo" al header cuando el usuario hace scroll hacia abajo. Sin embargo, hay algunos ajustes que debes hacer:
+
+*JavaScript*
+
+Cambia `window.scrollY>0` a `window.scrollY>50` (o cualquier valor que desees) para que la clase "abajo" se agregue cuando el usuario haya hecho scroll hacia abajo una cierta cantidad de p�xeles.
+
+```
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("header");
+  header.classList.toggle("abajo", window.scrollY > 50);
+})
+```
+
+*CSS*
+
+Aseg�rate de que la clase "abajo" est� definida correctamente en tu CSS. Parece que est�s usando `header .abajo` en lugar de `.abajo`. Cambia eso:
+
+```
+.abajo {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  z-index: 10;
+}
+```
+
+*Otros ajustes*
+
+- Aseg�rate de que el archivo `MrDafoe-Regular.ttf` est� en la ruta correcta.
+- Considera agregar `box-sizing: border-box` a tu CSS para evitar problemas con los m�rgenes y paddings.
+- Puedes mejorar la experiencia del usuario agregando una transici�n suave al header cuando se agrega la clase "abajo".
+
+Con estos ajustes, deber�as ver el cambio que deseas cuando
+
+
+
+ hagas scroll hacia abajo. �Si tienes alguna pregunta o neces
+
+itas m�s ayuda, no dudes en preguntar!
+
+
+
+
+
+CyberWave es un espacio de acceso publico a tecnologia y servicios de internet, orientado a un publico que incluye estudiantes, profesionales y gamers, quienes buscan tanto un lugar para trabajar como para socializar y disfrutar de servicios digitales.

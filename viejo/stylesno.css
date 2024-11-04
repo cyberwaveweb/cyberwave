@@ -1,0 +1,196 @@
+/* Cargar fuentes */
+@font-face {
+    font-family: 'Anton';
+    src: url('fonts/Anton,Tomorrow/Anton/Anton-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url('fonts/Anton,Tomorrow/Tomorrow/Tomorrow-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa-ExtraLight';
+    src: url('fonts/nexa/Nexa-ExtraLight.ttf') format('truetype');
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-image: url('img/Fondo.bmp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo de burbujas con desenfoque */
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* Detrás del contenido principal */
+    filter: blur(8px); /* Desenfoque aplicado al fondo de burbujas */
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #ff007f; /* Rosa neón */
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f, 0 0 60px #ff007f;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+/* Alternar colores neón más vivos */
+.bubbles span:nth-child(2n) {
+    background: #ff6f00; /* Naranja neón */
+    box-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00, 0 0 40px #ff6f00, 0 0 50px #ff6f00, 0 0 60px #ff6f00;
+}
+
+.bubbles span:nth-child(3n) {
+    background: #1a00ff; /* Azul eléctrico */
+    box-shadow: 0 0 10px #1a00ff, 0 0 20px #1a00ff, 0 0 30px #1a00ff, 0 0 40px #1a00ff, 0 0 50px #1a00ff, 0 0 60px #1a00ff;
+}
+
+.bubbles span:nth-child(4n) {
+    background: #ff00ff; /* Púrpura neón */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* Header y navegación */
+header {
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 25px;
+    z-index: 1; /* Encima de las burbujas */
+}
+
+/* Resto del CSS */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.logo-subtitle {
+    width: 150px;
+}
+
+/* Posicionar los enlaces de navegación */
+.nav-links {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Bienvenidos a */
+.welcome-section {
+    margin-top: 100px;
+    animation: fadeIn 2s;
+    z-index: 1; /* Encima de las burbujas */
+}
+
+.welcome-section h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.welcome-section h1 {
+    font-family: 'Nexa-Heavy', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+/* Desliza hacia abajo */
+.scroll-indicator {
+    margin-top: 110px;
+    animation: fadeInUp 2s;
+    z-index: 1; /* Encima de las burbujas */
+}
+
+/* Adaptación para móviles */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-title {
+        width: 80px;
+    }
+
+    .logo-subtitle {
+        width: 120px;
+    }
+
+    .nav-links {
+        position: static;
+        flex-direction: column;
+        gap: 10px;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .welcome-section h2 {
+        font-size: 28px;
+    }
+
+    .welcome-section h1 {
+        font-size: 48px;
+    }
+}
