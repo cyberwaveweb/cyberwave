@@ -230,6 +230,12 @@ header ul li a{
     margin: 180px 402px;
     font-family: 'Montserrat-Light', sans-serif;
 }
+.contactenos iframe{
+    position:absolute;
+    margin: 200px;
+    width:100%;
+    height: 70%;
+}
 .container {
     position: fixed;
     top: 0;
