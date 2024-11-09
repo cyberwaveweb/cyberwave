@@ -209,7 +209,10 @@ header ul li a{
     text-align:center;
     justify-content:center;
     margin: auto;
+    padding: 10px;
     font-family: 'Montserrat-Light', sans-serif;
+    color: #fff;
+    background: darkred;
 }
 .contactenos {
     display: flex;
