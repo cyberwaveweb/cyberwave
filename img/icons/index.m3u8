@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1, Canal 1 - Mitelefe
+https://mitelefe.com/Api/Videos/GetSourceUrl/694564/0/HLS
+#EXTINF:-1, Canal 2 - El Trece
+https://live-01-02-eltrece.vodgc.net:443/eltrecetv/tracks-v2a1/mono.m3u8
